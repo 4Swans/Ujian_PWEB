@@ -10,12 +10,12 @@ export default function Home() {
   }, []);
 
   const fetchBooks = async () => {
-    const response = await axios.get('http://localhost/api/books.php');
+    const response = await axios.get('http://localhost/Ujian/api/Books.php');
     setBooks(response.data);
   };
 
   const deleteBook = async (id) => {
-    await axios.delete(`http://localhost/api/books.php?id=${id}`);
+    await axios.delete(`http://localhost/Ujian/api/Books.php?id=${id}`);
     fetchBooks();
   };
 

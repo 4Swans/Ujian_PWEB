@@ -13,14 +13,14 @@ export default function Edit() {
   }, []);
 
   const fetchBook = async () => {
-    const response = await axios.get(`http://localhost/api/books.php?id=${id}`);
+    const response = await axios.get(`http://localhost/Ujian/api/Books.php?id=${id}`);
     setTitle(response.data.title);
     setAuthor(response.data.author);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost/api/books.php?id=${id}`, { title, author });
+    await axios.put(`http://localhost/Ujian/api/Books.php?id=${id}`, { title, author });
     navigate('/');
   };
 

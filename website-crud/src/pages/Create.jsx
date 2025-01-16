@@ -9,7 +9,7 @@ export default function Create() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('http://localhost/api/books.php', { title, author });
+    await axios.post('http://localhost/Ujian/api/Books.php', { title, author });
     navigate('/');
   };
 
